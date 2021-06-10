@@ -1,0 +1,50 @@
+@import './reset.less';
+@import './variable.less';
+
+html,
+body {
+  overflow: hidden;
+  // overflow: auto;
+}
+html body {
+  max-width: 1024px; // 大写的PX不会被自动转换为rem单位
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+#nprogress {
+  .bar {
+    height: 1px !important;
+    background: @dydYellow !important;
+
+    .peg {
+      box-shadow: 0 0 10px @dydYellow, 0 0 5px @dydYellow;
+    }
+  }
+}
+
+// 单行溢出隐藏
+.one-txt-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 两行溢出隐藏
+.two-txt-cut {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+// 隐藏滚动条
+::-webkit-scrollbar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}

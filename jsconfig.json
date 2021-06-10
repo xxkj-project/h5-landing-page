@@ -1,0 +1,21 @@
+// 解决wenbpack配置了别名后，vscode不能智能提示
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "public/*": [
+                "public/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "./src/**/*"
+    ],
+}
